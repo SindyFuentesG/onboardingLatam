@@ -6,21 +6,17 @@ import lombok.Value;
 
 @Value
 @Builder
-public class Product {
+public class ProductNotCreated {
 
-  Long id;
   Name name;
   Description description;
   Price price;
   Quantity quantity;
 
-  public Product(Long id, Name name, Description description, Price price, Quantity quantity) {
-    this.id = Preconditions.checkNotNull(id);
+  public ProductNotCreated(Name name, Description description, Price price, Quantity quantity) {
     this.name = Preconditions.checkNotNull(name);
     this.description = Preconditions.checkNotNull(description);
     this.price = Preconditions.checkNotNull(price);
     this.quantity = Preconditions.checkNotNull(quantity);
   }
-
-
 }
